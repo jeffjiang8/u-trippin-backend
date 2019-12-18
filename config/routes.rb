@@ -6,7 +6,10 @@ Rails.application.routes.draw do
       resources :trips
       resources :users
       resources :flights
-      post "/get_flights", to: "flights#get_flights" 
+      post "/get_flights", to: "flights#get_flights"
+      post "/get_airports", to: "flights#get_airports" 
+      post "/get_location", to: "flights#get_location"
+      post "/signup", to: "users#create"
     end
   end
 

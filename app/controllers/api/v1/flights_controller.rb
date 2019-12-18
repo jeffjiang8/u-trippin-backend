@@ -9,4 +9,15 @@ class Api::V1::FlightsController < ApplicationController
         render json: flights
     end
 
+    def get_airports
+        resp = Net::HTTP.get_response(URI.parse("http://aviation-edge.com/v2/public/autocomplete?key=#{KEY_TWO}&city=#{params[:city_name]}")).body
+        airports = JSON.parse(resp)
+        render json: airports
+    end
+
+    def get_location
+        resp = Net::HTTP.get_response(URI.parse("https://api.flightstats.com/flex/airports/rest/v1/json/iata/#{params[:iata]}?appId=#{ID}&appKey=#{KEY}")).body
+        location = JSON.parse(resp)
+        render json: location
+    end
 end
