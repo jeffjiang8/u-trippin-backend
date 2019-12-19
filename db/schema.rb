@@ -32,6 +32,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_024018) do
   end
 
   create_table "trips", force: :cascade do |t|
+    t.string "name"
     t.string "flight_id"
     t.string "user_id"
     t.datetime "created_at", precision: 6, null: false
