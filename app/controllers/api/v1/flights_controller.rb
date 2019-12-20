@@ -20,4 +20,11 @@ class Api::V1::FlightsController < ApplicationController
         location = JSON.parse(resp)
         render json: location
     end
+
+    def get_user_flight
+        resp = Net::HTTP.get_response(URI.parse("https://api.flightstats.com/flex/schedules/rest/v1/json/flight/#{params[:carrier]}/#{params[:flight_id]}/departing/#{params[:year]}/#{params[:month]}/#{params[:day]}?appId=#{ID}&appKey=#{KEY}")).body
+        flight = JSON.parse(resp)
+        render json: flight
+    end
+
 end
