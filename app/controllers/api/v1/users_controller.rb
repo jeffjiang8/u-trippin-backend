@@ -15,6 +15,7 @@ class Api::V1::UsersController < ApplicationController
             password: params[:password]
         )
         if user.save
+            # token = JWT.encode({user_id: user.id}, "发发发")
             render json: user
         else 
             render json: {errors: user.errors.full_messages}

@@ -11,7 +11,6 @@ class Api::V1::TripsController < ApplicationController
     end
 
     def create
-    
         trip = Trip.create({
             name: params[:name],
             carrier: params[:carrier],
@@ -19,7 +18,7 @@ class Api::V1::TripsController < ApplicationController
             month: params[:month],
             day: params[:day],
             flight_id: params[:flight_id],
-            user_id: params[:user_id]
+            user_id: get_auth_header
         })
 
         render json: trip
