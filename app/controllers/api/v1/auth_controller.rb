@@ -10,6 +10,8 @@ class Api::V1::AuthController < ApplicationController
         end
     end
 
+    
+
     def auto_login
         if session_user
             render json: session_user

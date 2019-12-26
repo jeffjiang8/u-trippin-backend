@@ -13,6 +13,7 @@ class Api::V1::TripsController < ApplicationController
     def create
         trip = Trip.create({
             name: params[:name],
+            from: params[:from],
             carrier: params[:carrier],
             year: params[:year],
             month: params[:month],
