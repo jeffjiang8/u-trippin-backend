@@ -18,6 +18,7 @@ class Api::V1::TripsController < ApplicationController
             year: params[:year],
             month: params[:month],
             day: params[:day],
+            time: params[:time],
             flight_id: params[:flight_id],
             user_id: get_auth_header
         })
