@@ -5,6 +5,7 @@ class CreateItems < ActiveRecord::Migration[6.0]
       t.string :category_id
       t.string :name
       t.boolean :packed
+      t.string :user_id
 
       t.timestamps
     end

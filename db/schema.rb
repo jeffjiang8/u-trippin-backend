@@ -27,6 +27,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_024018) do
     t.string "category_id"
     t.string "name"
     t.boolean "packed"
+    t.string "user_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
