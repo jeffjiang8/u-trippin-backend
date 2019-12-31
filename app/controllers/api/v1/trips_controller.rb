@@ -27,5 +27,11 @@ class Api::V1::TripsController < ApplicationController
         render json: trip
     end
 
+    def destroy
+        Trip.find(params[:id]).destroy
+
+        render json: Trip.all
+    end
+
         
 end
