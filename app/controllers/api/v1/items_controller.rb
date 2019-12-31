@@ -18,7 +18,7 @@ class Api::V1::ItemsController < ApplicationController
 
     def update
         item = Item.find(params[:id])
-        item.update( trip_id: params[:trip_id],
+        item.update(    trip_id: params[:trip_id],
                         category_id: params[:category_id],
                         name: params[:name],
                         packed: params[:packed],
