@@ -35,6 +35,7 @@ ActiveRecord::Schema.define(version: 2019_12_12_024018) do
   create_table "trips", force: :cascade do |t|
     t.string "name"
     t.string "from"
+    t.string "terminal"
     t.string "carrier"
     t.string "year"
     t.string "month"

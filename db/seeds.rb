@@ -17,6 +17,7 @@
 # waterbottle_icon = File.read('./images/waterbottle.png')
 
 Category.destroy_all
+Item.destroy_all
 
 Category.create(name: "clothing", avatar: "./images/clothing.png")
 Category.create(name: "entertainment", avatar: "./images/entertainment.png")
@@ -27,3 +28,4 @@ Category.create(name: "identification", avatar: "./images/identification.png")
 Category.create(name: "key", avatar: "./images/key.png")
 Category.create(name: "medicine", avatar: "./images/medicine.png")
 Category.create(name: "waterbottle", avatar: "./images/waterbottle.png")
+

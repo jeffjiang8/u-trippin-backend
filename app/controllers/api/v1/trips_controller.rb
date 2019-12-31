@@ -14,6 +14,7 @@ class Api::V1::TripsController < ApplicationController
         trip = Trip.create({
             name: params[:name],
             from: params[:from],
+            terminal: params[:terminal],
             carrier: params[:carrier],
             year: params[:year],
             month: params[:month],

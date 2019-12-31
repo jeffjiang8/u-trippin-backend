@@ -3,6 +3,7 @@ class CreateTrips < ActiveRecord::Migration[6.0]
     create_table :trips do |t|
       t.string :name
       t.string :from
+      t.string :terminal
       t.string :carrier
       t.string :year
       t.string :month

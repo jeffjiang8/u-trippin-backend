@@ -10,7 +10,7 @@ class Api::V1::ItemsController < ApplicationController
             category_id: params[:category_id],
             name: params[:name],
             packed: params[:packed],
-            user_id: get_auth_header
+            user_id: params[:user_id],
         })
 
         render json: item
